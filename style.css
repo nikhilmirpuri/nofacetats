@@ -1,0 +1,444 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    /* outline: 2px dotted red; */
+  }
+  
+  /*iframe {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+  }*/
+  
+  video {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+  }
+  
+  @font-face {
+    font-family: "American Scribe";
+    src: url("//db.onlinewebfonts.com/t/a53e489ff8262e8e5302c1ad24494aff.eot");
+    src: url("//db.onlinewebfonts.com/t/a53e489ff8262e8e5302c1ad24494aff.eot?#iefix")
+        format("embedded-opentype"),
+      url("//db.onlinewebfonts.com/t/a53e489ff8262e8e5302c1ad24494aff.woff2")
+        format("woff2"),
+      url("//db.onlinewebfonts.com/t/a53e489ff8262e8e5302c1ad24494aff.woff")
+        format("woff"),
+      url("//db.onlinewebfonts.com/t/a53e489ff8262e8e5302c1ad24494aff.ttf")
+        format("truetype"),
+      url("//db.onlinewebfonts.com/t/a53e489ff8262e8e5302c1ad24494aff.svg#American Scribe")
+        format("svg");
+  }
+  
+  @font-face {
+    font-family: "Archivo";
+    src: url("//fonts.googleapis.com/css?family=Archivo");
+  }
+  
+  h1 {
+    font-family: American Scribe, sans-serif;
+    font-weight: 400;
+    font-size: 10ex;
+    color: white;
+    margin: 0;
+    padding: 0;
+    height: 8%;
+  }
+  
+  .performer {
+    text-align: left;
+  }
+  
+  h2 {
+    font-family: Archivo, sans-serif;
+    font-weight: 600;
+    font-size: 8ex;
+    color: white;
+    margin: 0;
+    padding: 0;
+  }
+  
+  h3 {
+    font-family: Archivo, sans-serif;
+    font-weight: 600;
+    font-size: 6ex;
+    color: white;
+    margin: 0;
+    padding: 0;
+    /*outline: 2px dotted blue; */
+  }
+  
+  h4 {
+    font-family: Archivo, sans-serif;
+    font-weight: 600;
+    font-size: 3ex;
+    color: white;
+    margin: 0;
+    padding: 0;
+    /*outline: 2px dotted blue; */
+  }
+  
+  p1 {
+    font-family: Archivo, sans-serif;
+    font-weight: 300;
+    font-size: 3ex;
+    color: white;
+    margin: 0;
+    padding: 0;
+    /*outline: 2px dotted blue; */
+  }
+  
+  .scrollbottomleft {
+    width: 6vw;
+    height: auto;
+  }
+  
+  #infoleft {
+    align-items: left;
+    font-family: Archivo, helvetica, arial, Sans-serif;
+    font-weight: 400;
+    font-size: 3ex;
+    display: inline-block;
+    vertical-align: bottom;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 1vw;
+    /*outline: 2px dotted blue; */
+  }
+  
+  a.instagram {
+    font-family: Archivo, sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 2ex;
+    color: white;
+  }
+  
+  a.instagram:hover {
+    cursor: pointer;
+    font-family: Archivo, sans-serif;
+  }
+  
+  a.nofacetats {
+    font-family: Archivo, sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 2ex;
+    color: white;
+  }
+  
+  a.nofacetats:hover {
+    cursor: pointer;
+    font-family: Archivo, sans-serif;
+  }
+  
+  a.contact {
+    font-family: Archivo, sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 2ex;
+    color: white;
+  }
+  
+  a.contact:hover {
+    cursor: pointer;
+    font-family: Archivo, sans-serif;
+  }
+  
+  a.about {
+    font-family: Archivo, sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 2ex;
+    color: white;
+  }
+  
+  a.about:hover {
+    cursor: pointer;
+    font-family: Archivo, sans-serif;
+  }
+  
+  a.gallery {
+    font-family: Archivo, sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 4ex;
+    margin-top: 1ex;
+    color: white;
+  }
+  
+  a.gallery:hover {
+    cursor: pointer;
+    font-family: Archivo, sans-serif;
+  }
+  
+  #inforight {
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    align-items: right;
+    font-family: Archivo, helvetica, arial, Sans-serif;
+    font-weight: 600;
+    font-size: 2ex;
+    margin-bottom: 1vw;
+    /*outline: 2px dotted blue; */
+  }
+  
+  .draw {
+    width: auto;
+    height: 3vh;
+    pointer-events: auto;
+    display: inline-block;
+  }
+  
+  .draw:hover {
+    cursor: pointer;
+  }
+  
+  .hide {
+    width: auto;
+    height: 3vh;
+    pointer-events: auto;
+    display: inline-block;
+  }
+  
+  .hide:hover {
+    cursor: pointer;
+  }
+  
+  #showOrHidebox .hide {
+    display: none;
+  }
+  
+  #showOrHidebox.showing .hide {
+    display: inline-block;
+  }
+  
+  #showOrHidebox.showing .draw {
+    display: none;
+  }
+  
+  #showOrHidebox {
+    pointer-events: none;
+  }
+  
+  #showOrHide {
+    align-items: right;
+    text-align: right;
+    justify-content: right;
+    position: relative;
+  }
+  
+  #tattoo {
+    background-color: black;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: right;
+    /*outline: 2px dotted blue; */
+  }
+  
+  #tool {
+    margin-top: 1vw;
+    margin-bottom: 0.5vw;
+    width: auto;
+  }
+  
+  .button {
+    font-size: 2ex;
+    font-family: Archivo, helvetica, arial, Sans-serif;
+    font-weight: 400;
+  }
+  
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    color: white;
+  }
+  
+  #chat {
+    width: auto;
+    height: auto;
+    align-items: right;
+    display: flex;
+    flex-direction: column;
+    vertical-align: bottom;
+    position: absolute;
+    bottom: 0;
+    margin: 0;
+    margin-left: 0.5vw;
+    margin-bottom: 1vw;
+    padding: 0;
+    z-index: -1;
+  }
+  
+  .ctb {
+    width: 300px;
+    height: auto;
+  }
+  
+  #images {
+    display: grid;
+    grid-template-columns: 4.5vw 4.5vw 4.5vw;
+    grid-gap: 0.5vw;
+    /*outline: 2px dotted blue; */
+  }
+  
+  .mainpage {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    vertical-align: center;
+    align-items: center;
+    padding: 1vw;
+    position: fixed;
+    font-family: Archivo, helvetica, arial, Sans-serif;
+    font-weight: 600;
+    pointer-events: none;
+  }
+  
+  .logo {
+    width: 100vw;
+    justify-content: center;
+    vertical-align: center;
+    align-items: center;
+    padding: 1vw;
+    position: fixed;
+    font-family: Archivo, helvetica, arial, Sans-serif;
+    font-weight: 600;
+  }
+  
+  /* MARQUEE */
+  
+  .marquee {
+    height: 6vh;
+    width: 74vw;
+    overflow: hidden;
+    position: fixed;
+    background: transparent;
+    color: #ffffff;
+    border: 0;
+    pointer-events: none;
+    bottom: 0;
+    margin-left: 8vw;
+    margin-right: 0vw;
+    margin-bottom: 1vw;
+    vertical-align: bottom;
+    display: inline-block;
+    bottom: 0;
+  }
+  
+  .marquee h4 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    line-height: 10vh;
+    text-align: center;
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+    -moz-animation: scroll-left 2s linear infinite;
+    -webkit-animation: scroll-left 2s linear infinite;
+    animation: scroll-left 30s linear infinite;
+  }
+  
+  @-moz-keyframes scroll-left {
+    0% {
+      -moz-transform: translateX(100%);
+    }
+    100% {
+      -moz-transform: translateX(-100%);
+    }
+  }
+  
+  @-webkit-keyframes scroll-left {
+    0% {
+      -webkit-transform: translateX(100%);
+    }
+    100% {
+      -webkit-transform: translateX(-100%);
+    }
+  }
+  
+  @keyframes scroll-left {
+    0% {
+      -moz-transform: translateX(100%);
+      -webkit-transform: translateX(100%);
+      transform: translateX(100%);
+    }
+    100% {
+      -moz-transform: translateX(-100%);
+      -webkit-transform: translateX(-100%);
+      transform: translateX(-100%);
+    }
+  }
+  
+  /* MARQUEE */
+  
+  #sideleft {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 20vw;
+    height: 100vh;
+    padding: 1vw;
+    align-items: center;
+    overflow: hidden;
+    /*outline: 2px dotted blue; */
+  }
+  
+  #sideright {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 350px;
+    height: 100vh;
+    align-items: center;
+    text-align: right;
+    padding: 1vw;
+    overflow: hidden;
+    margin-bottom: 1vh;
+    /*outline: 2px dotted blue; */
+  }
+  
+  #menu {
+    display: flex;
+    flex-direction: column;
+    height: 90h;
+    width: 100vw;
+    justify-content: center;
+    vertical-align: center;
+    align-items: center;
+    padding: 24vw;
+    position: fixed;
+    text-align: left;
+  }
+  
+  #aboutus {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    vertical-align: center;
+    align-items: center;
+    padding: 30vw;
+    position: fixed;
+    text-align: left;
+  }
+  

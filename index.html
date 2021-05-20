@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>No Face Tats!</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Tangerine"
+    />
+    <link
+      href="//db.onlinewebfonts.com/c/a53e489ff8262e8e5302c1ad24494aff?family=American+Scribe"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+    />
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.11/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.11/addons/p5.dom.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.11/addons/p5.sound.min.js"></script>
+    <script src="assets"></script>
+    <script src="sketch.js"></script>
+  </head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <body>
+    <!--   Website starts here!   -->
+    <!--   the stream!   -->
+    <div id="video">
+      <video controls autoplay>
+        <source
+          src="https://cdn.glitch.com/b0f38a5f-fd5b-4a93-a669-dd9ce2328985%2FCRIT%20DAY%20FILM%20W%20TATS_1%201080p.mp4?v=1616151840960"
+          type="video/mp4"
+        />
+      </video>
+      <!--   
+<iframe
+        src="https://www.youtube-nocookie.com/embed/Pz_QVt1rRZU?modestbranding=1&autohide=1&showinfo=0&rel=0;controls=0"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      >
+      </iframe>
+-->
+    </div>
+    <!--   Everything overlaying the video!   -->
+    <div id="overlay">
+      <!-- MARQUEE -->
+      <div class="marquee">
+        <h4>PERFORMING LIVE: LEXI!</h4>
+      </div>
+      <!--   LEFT SIDE   -->
+      <div id="sideleft">
+        <!--   Title!   -->
+        <h1>No Face Tats</h1>
+        <!-- <h2 class="performer">Lexi!</h2>-->
+        <article id="infoleft">
+          <a href="scroll.html" target="_blank">
+            <img
+              src="https://cdn.glitch.com/b0f38a5f-fd5b-4a93-a669-dd9ce2328985%2Flogo1-02.png?v=1615567147180"
+              class="scrollbottomleft"
+            />
+          </a>
+        </article>
+      </div>
+
+      <!--   RIGHT SIDE   -->
+      <div id="sideright">
+        <!--   Info!   -->
+        <div id="tattoo">
+          <article id="inforight">
+            <a onclick="showOrHideDiv(); changeImage(this)" id="showOrHidebox">
+              <img
+                src="https://cdn.glitch.com/b0f38a5f-fd5b-4a93-a669-dd9ce2328985%2FBUTTON1-01.png?v=1616086349745"
+                class="draw"
+              />
+              <img
+                src="https://cdn.glitch.com/b0f38a5f-fd5b-4a93-a669-dd9ce2328985%2FBUTTON2.png?v=1616084062970"
+                class="hide"
+              />
+            </a>
+            <div id="showOrHide" style="display:none">
+              <!--   Drawing Tool!   -->
+              <div id="tool"></div>
+              <div class="btn-item">
+                <button onclick="saveImage()" class="button">
+                  Upload
+                </button>
+              </div>
+            </div>
+            <script>
+              function showOrHideDiv() {
+                var v = document.getElementById("showOrHide");
+                if (v.style.display === "none") {
+                  v.style.display = "block";
+                } else {
+                  v.style.display = "none";
+                }
+              }
+
+              function changeImage(obj) {
+                obj.classList.toggle("showing");
+              }
+            </script>
+          </article>
+          <!--   Chat!   -->
+
+          <div id="chat">
+            <img
+              src="https://cdn.glitch.com/b0f38a5f-fd5b-4a93-a669-dd9ce2328985%2Fchat3.gif?v=1616092117332"
+              class="ctb"
+            />
+            <img
+              src="https://cdn.glitch.com/b0f38a5f-fd5b-4a93-a669-dd9ce2328985%2Fwriteamessage-06.png?v=1616092375477"
+              class="ctb"
+            />
+          </div>
+
+          <!--   Gallery!   -->
+          <!-- <a href="gallery.html" target="_blank" class="gallery">Gallery</a>-->
+          <!--   Gallery of Tats!   -->
+          <!--   footer   -->
+        </div>
+      </div>
+    </div>
+    <!--   Website ends here!   -->
+  </body>
+</html>
